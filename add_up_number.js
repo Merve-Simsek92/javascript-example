@@ -33,6 +33,7 @@
 //     }
 // console.log(reversed("merve"));  
 
+
 //Create a function that takes a number (step) as an argument and returns the number of matchsticks in that step. See step 1, 2 and 3 in the image above.
 // matchHouses(1) ➞ 6
 
@@ -142,17 +143,110 @@
 
 //Create a function that takes an array of numbers and return "Boom!" if the digit 7 appears in the array. Otherwise, return "there is no 7 in the array".
 
-function sevenBoom(arr){
-    for (let i of arr){
-        for (let j of i.tostring()){
-            if(7==j){
+// function sevenBoom(arr){
+//     for (let i of arr){
+//         for (let j of i.tostring()){
+//             if(7==j){
 
                 
-            }else{
-                "there is no 7 in the array"
-            }
+//             }else{
+//                 "there is no 7 in the array"
+//             }
             
-        }
-    }
-} 
-console.log(sevenBoom([1,2,7]));
+//         }
+//     }
+// } 
+// console.log(sevenBoom([1,2,7]));
+
+// In a board game, a piece may advance 1-6 tiles forward depending on the number rolled on a six-sided dice. If you advance your piece onto the same tile as another player's piece, both of you earn a bonus.
+
+// Can you reach your friend's tile number in the next roll? Create a function that takes your position a and your friend's position b and returns a boolean representation of whether it's possible to earn a bonus on any dice roll.
+
+// Examples
+// possibleBonus(3, 7) ➞ true
+
+// possibleBonus(1, 9) ➞ false
+
+// possibleBonus(5, 3) ➞ false
+
+// function possibleBonus(a,b) {
+//     if(a<b){
+//         if(b-a<=6){
+//             return true;
+//         }else{
+//             return false;
+//         }
+//     }else {
+//         return false;
+
+//     }
+    
+// }
+// console.log(possibleBonus(1,9));
+
+// The right shift operation is similar to floor division by powers of two.
+
+// Sample calculation using the right shift operator ( >> ):
+
+// 80 >> 3 = floor(80/2^3) = floor(80/8) = 10
+// -24 >> 2 = floor(-24/2^2) = floor(-24/4) = -6
+// -5 >> 1 = floor(-5/2^1) = floor(-5/2) = -3
+// Write a function that mimics (without the use of >>) the right shift operator and returns the result from the two given integers.
+
+// function reserved(str) {
+//     var result="";
+//     for(var i=str.length-1;i>=0;i--) {
+//         result+=str[i];
+
+//     }
+//   return result
+    
+// }
+// console.log(reserved("merve"))
+
+// Given a total due and an array representing the amount of change in your pocket, determine whether or not you are able to pay for the item. Change will always be represented in the following order: quarters, dimes, nickels, pennies.
+
+// To illustrate: changeEnough([25, 20, 5, 0], 4.25) should yield true, since having 25 quarters, 20 dimes, 5 nickels and 0 pennies gives you 6.25 + 2 + .25 + 0 = 8.50.
+// changeEnough([2, 100, 0, 0], 14.11) ➞ false
+
+// changeEnough([0, 0, 20, 5], 0.75) ➞ true
+
+// changeEnough([30, 40, 20, 5], 12.55) ➞ true
+
+// changeEnough([10, 0, 0, 50], 3.85) ➞ false
+
+// changeEnough([1, 0, 5, 219], 19.99) ➞ false
+// Notes
+// quarter: 25 cents / $0.25
+// dime: 10 cents / $0.10
+// nickel: 5 cents / $0.05
+// penny: 1 cent / $0.01
+
+// function changeEnough(list,pocket) {
+//   var result;
+//   result=list[0]*0.25 + list[1]*0.10 +list[2]*0.05 +list[3]*0.01;
+//   if(pocket>result){
+//     return false;
+//   }else{
+//     return true
+//   }
+  
+// }
+// console.log(changeEnough([1, 0, 5, 219], 19.99))
+    
+// Groups and ranges indicate groups and ranges of expression characters. The regular expression x|y matches either "x" or "y".
+
+// const REGEXP = /blue|red/
+
+// "red flag".match(REGEXP)  // red
+// "blue flag".match(REGEXP)  // blue
+
+// // Matches "blue" in "blue flag" and "red" in "red flag".
+// Create a regular expression to match all red flag and blue flag in a string. You must use | in your expression. Flags can come in any order.
+
+// Examples
+// "red flag blue flag".match(REGEXP) ➞ ["red flag", "blue flag"]
+
+// "yellow flag red flag blue flag green flag".match(REGEXP) ➞ ["red flag", "blue flag"]
+
+// "pink flag red flag black flag blue flag green flag red flag ".match(REGEXP) ➞ ["red flag", "blue flag", "red flag"]
