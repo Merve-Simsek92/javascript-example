@@ -20,4 +20,23 @@ function reserved(str) {
         
  }
  console.log(reserved("merve"))
-    
+
+//  add_ly = add_suffix("ly")
+
+// add_ly("hopeless") ➞ "hopelessly"
+// add_ly("total") ➞ "totally"
+
+// add_less = add_suffix("less")
+
+// add_less("fear") ➞ "fearless"
+// add_less("ruth") ➞ "ruthless"
+
+function add_ly(word){
+
+    return word+"ly"
+}
+function add_less(word){
+    return word+"less"
+}  
+console.log(add_ly("hopeless")) ;
+console.log(add_less("ruth")); 

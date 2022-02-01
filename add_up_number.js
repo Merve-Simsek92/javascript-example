@@ -417,13 +417,95 @@
 
 // Examples
 
-function binary(n){
-	let result=n.toString(2)
-	return result
-}
-console.log(binary(5))
+// // function binary(n){
+// // 	let result=n.toString(2)
+// // 	return result
+// // }
+// // console.log(binary(5))
 
-function shiftToLeft(a,b){
-	return a*2**b
-}
-console.log(shiftToLeft(46,6))
+// // function shiftToLeft(a,b){
+// // 	return a*2**b
+// // }
+// // console.log(shiftToLeft(46,6))
+
+// // // Calling makePlusFunction(5) returns a new function that takes an input,
+// // // and returns the result when adding 5 to it.
+
+// // const plusFive = makePlusFunction(5)
+
+// // plusFive(2) ➞ 7
+
+// // plusFive(-8) ➞ -3
+
+// // // Calling makePlusFunction(10) returns a new function that takes an input,
+// // // and returns the result when adding 10 to it.
+
+// // const plusTen = makePlusFunction(10)
+
+// // plusTen(0) ➞ 10
+
+// // plusTen(188) ➞ 198
+
+// // plusFive(plusTen(0)) ➞ 15
+
+// plusadd=(a)=>
+// Create a function that returns true if the first array can be nested inside the second.
+
+// arr1 can be nested inside arr2 if:
+
+// arr1's min is greater than arr2's min.
+// arr1's max is less than arr2's max.
+// Examples
+// canNest([1, 2, 3, 4], [0, 6]) ➞ true
+
+// canNest([3, 1], [4, 0]) ➞ true
+
+// canNest([9, 9, 8], [8, 9]) ➞ false
+
+// canNest([1, 2, 3, 4], [2, 3]) ➞ false
+
+
+//    function sortArray(list1){
+//    list1.sort(function(x,y){
+//            return x-y;     })
+//    console.log(list1);}
+
+//    function sortArray(list2){
+//     list2.sort(function(x,y){
+//             return x-y;     })
+//     console.log(list2);}
+ 
+
+
+//  function cannest(list1,list2){
+//      if((list1[0]>list2[0])&& (list1[list1.length]<list2[list2.length]))
+//  {return true}else{
+//      false
+//  }}
+//  console.log(cannest([1, 2, 3, 4],[0, 6]))
+
+//  sevenBoom([1, 2, 3, 4, 5, 6, 7]) ➞ "Boom!"
+// // 7 contains the number seven.
+
+// sevenBoom([8, 6, 33, 100]) ➞ "there is no 7 in the array"
+// // None of the items contain 7 within them.
+
+// sevenBoom([2, 55, 60, 97, 86]) ➞ "Boom!"
+// 97 contains the number seven.
+
+function sevenBoom(list){
+    word=""
+    for(let i of list){
+        word+=i
+    }return 
+    for(let j of word) {
+        
+    
+        
+       
+        }
+
+    }
+    
+
+console.log(sevenBoom([1,2,3,4,7]));
