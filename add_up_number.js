@@ -343,10 +343,87 @@
 // concat([1, 2], [3, 4]) ➞ [1, 2, 3, 4]
 
 // concat([4, 4, 4, 4, 4]) ➞ [4, 4, 4, 4, 4]
-function concat(list) {
-	result=[];
-	for(let i of list){
-		result=i.concat(result)
-	}return  result
+// function concat(list) {
+// 	result=[];
+// 	for(let i of list){
+// 		result=i.concat(result)
+// 	}return  result
+// }
+// console.log(concat([1], [2], [3], [4], [5] ,[6], [7])
+
+// According to the lodash documentation, _.compact creates an array with all falsey values removed. The values false, null, 0, "", undefined, and NaN are falsey.
+
+// Your task is to build this helper function without using lodash. You will write a function that receives an array and removes all falsey values.
+// compact([0, 1, false, 2, "", 3]);   // => [1, 2, 3]
+
+// function compact(list){
+// 	result=[]
+// 	for (let i of list){
+// 	if(i!="" || i!=false || i!=0 ){
+// 		result.push(i)
+		 
+	
+// 	}}
+	
+// 	return result
+// }
+// console.log(compact([0, 1,false, 2, "", 3]));
+
+// Your function will be passed two functions, f and g, that don't take any parameters. Your function has to call them, and return a string which indicates which function returned the larger number.
+
+// If f returns the larger number, return the string f.
+// If g returns the larger number, return the string g.
+// If the functions return the same number, return the string neither.
+// Examples
+// whichIsLarger(() => 5, () => 10) ➞ "g"
+
+// whichIsLarger(() => 25,  () => 25) ➞ "neither"
+
+// whichIsLarger(() => 505050, () => 5050) ➞ "f"
+// Notes
+// This exercise is designed as an introduction to higher order functions (functions which use other functions to do their work).
+
+
+// function whichIsLarger(f, g) {
+// 	if(f>g){
+// 		return "f"
+// 	}else if(f==g){
+// 		return "neither"
+// 	}else if(f<g){
+// 		return "g"
+// 	}
+// }
+// console.log(whichIsLarger(5,10))
+
+
+// Create a function that takes a number as an argument. Add up all the numbers from 1 to the number you passed to the function. For example, if the input is 4 then your function should return 10 because 1 + 2 + 3 + 4 = 10.
+
+// Examples
+// addUp(4) ➞ 10
+
+// addUp(13) ➞ 91
+
+// addUp(600) ➞ 180300
+// //
+// function addUp(n){
+// 	if(n==1){ return 1}
+//   return n + addUp(n-1)}
+// console.log(addUp(4))
+
+
+// Create a function that returns a base-2 (binary) representation of a base-10 (decimal) string number. To convert is simple: ((2) means base-2 and (10) means base-10) 010101001(2) = 1 + 8 + 32 + 128.
+
+// Going from right to left, the value of the most right bit is 1, now from that every bit to the left will be x2 the value, value of an 8 bit binary numbers are (256, 128, 64, 32, 16, 8, 4, 2, 1).
+
+// Examples
+
+function binary(n){
+	let result=n.toString(2)
+	return result
 }
-console.log(concat([1], [2], [3], [4], [5] ,[6], [7])
+console.log(binary(5))
+
+function shiftToLeft(a,b){
+	return a*2**b
+}
+console.log(shiftToLeft(46,6))
