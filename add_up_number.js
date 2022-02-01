@@ -250,3 +250,103 @@
 // "yellow flag red flag blue flag green flag".match(REGEXP) ➞ ["red flag", "blue flag"]
 
 // "pink flag red flag black flag blue flag green flag red flag ".match(REGEXP) ➞ ["red flag", "blue flag", "red flag"]
+
+// let i=0;
+// let sum=0;
+// // while (i<6){
+// //     sum+=i
+// //     i++
+// // }
+// // console.log(sum)
+
+// do {
+//     sum+=i
+//     i++
+// }while(i<6){
+//     sum+=i
+//     i++
+// }
+// console.log({sum},{i})
+
+// // let i=+prompt('bir sayı girin');
+// // while (isNaN(i)){
+// //     i=+prompt("bir sayı girin")
+//}
+// let str="clarusway"
+// for (let i= 0;i <str.length;i++) {
+//    if(i%5==0) continue;
+//    console.log(i)
+    
+// }
+
+// let x,y;
+// let count=0;
+// let cift=0;
+// while(true){
+//     x=Math.floor(Math.random()*6+1);
+//     y=Math.trunc(Math.random()*6+1);
+//     if(x==6 && y==6){
+//         count++;
+//         console.log(x,y,"kazandınız");
+//         break;
+//     }else if(x==y && x!=6){
+//         cift++
+//         console.log(x,y,'${cift}. cift zar' );
+//         if (cift==3){
+//             console.log('kaybettiniz');
+//             break;
+//         }
+
+//     }
+// }
+
+// Create a function that takes a number x and a character y ("m" for male, "f" for female), and returns the name of an ancestor (m/f) or descendant (m/f).
+
+// If the number is negative, return the related ancestor.
+// If positive, return the related descendant.
+// You are generation 0. In the case of 0 (male or female), return "me!".
+// Examples
+// generation(2, "f") ➞ "granddaughter"
+
+// generation(-3, "m") ➞ "great grandfather"
+
+// generation(1, "f") ➞ "daughter"
+// Notes
+// Check the Resources tab for helpful hints.
+
+// Generation	Male	Female
+// -3	great grandfather	great grandmother
+// -2	grandfather	grandmother
+// -1	father	mother
+// 0	me!	me!
+// 1	son	daughter
+// 2	grandson	granddaughter
+// 3	great grandson	great granddaughter
+
+// function generation(x,y) {
+//     let f = {"-3":"great grandmother","-2":"grandmother","-1":"mother","0":"me!","1":"daughter","2":"granddaughter","3":"great granddaughter"}
+//    let m = {"-3":"great grandfather","-2":"grandfather","-1":"father","0":"me!","1":"son","2":"grandson","3":"great grandson"}
+//    if(y=='f')return f[x]
+//    return m[x]
+//    }
+// The time has a format: hours:minutes. Both hours and minutes has two digits, like 09:00.
+
+// Make a regexp to find time in the string: Breakfast at 09:00 in the room 123:456. In this task there’s no need to check time correctness yet, so 25:99 can also be a valid result. The regexp should not match 123:456.
+
+// Create a function that concatenates n input arrays, where n is variable.
+
+// Examples
+// concat([1, 2, 3], [4, 5], [6, 7]) ➞ [1, 2, 3, 4, 5, 6, 7]
+
+// concat([1], [2], [3], [4], [5], [6], [7]) ➞ [1, 2, 3, 4, 5, 6, 7]
+
+// concat([1, 2], [3, 4]) ➞ [1, 2, 3, 4]
+
+// concat([4, 4, 4, 4, 4]) ➞ [4, 4, 4, 4, 4]
+function concat(list) {
+	result=[];
+	for(let i of list){
+		result=i.concat(result)
+	}return  result
+}
+console.log(concat([1], [2], [3], [4], [5] ,[6], [7])
