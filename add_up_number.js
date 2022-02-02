@@ -498,7 +498,8 @@ function sevenBoom(list){
     for(let i of list){
         word+=i
     }return 
-    for(let j of word) {
+    for(let j in word) {
+        console.log(j)
         
     
         
