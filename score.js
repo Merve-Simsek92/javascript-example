@@ -23,7 +23,10 @@ player2.addEventListener("click",()=>{
     if(playerscore2<winscore){
         playerscore2++;
         score2.innerHTML=playerscore2;
-    }
+        if(playerscore2==winscore){
+        player1.style.backgroundColor="red"
+        player2.style.backgroundColor="green"
+    }}
 })
 reset.addEventListener("click",()=>{
     playerscore1=0;
